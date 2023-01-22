@@ -19,6 +19,8 @@ app.get("/", async (req, res) => {
   res.send("Hello from DALL-E!");
 });
 
+console.log(process.env.MONGODB_URL);
+
 const startServer = async () => {
   try {
     connectDB(process.env.MONGODB_URL);
